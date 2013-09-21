@@ -5,17 +5,12 @@ at first glance. It is very useful for example when you only want to show the
 first n paragraphs of a long text. The plugin automatically adds buttons at
 the end of the truncated paragraphs to toggle the conceiled text visibility.
 
-## Assumptions
+## Installation
 
-- The plugin assumes there exists a container that contains several paragraphs
-  as chlildren, please look at `test.html` for an example.
-- The truncation occurs currently only at paragraph borders please take a look
-  at [jTruncate](https://github.com/cybear/jTruncate) if you need to truncate
-  at the paragraph level (show just n characters of a paragraph).
+- Include `hide_paragraphs.js` in your HTML headers after JQuery.
+- You are done
 
 ## Usage
-
-Include `hide_paragraphs.js` in your HTML headers.
 
 ```javascript
 $("container selector").hideParagraphs();
@@ -23,11 +18,19 @@ $("container selector").hideParagraphs();
 
 by default it show just the first paragraph.
 
-or passing an options object:
+or passing an options object (see options below):
 
 ```javascript
 $("container selector").hideParagraphs(options);
 ```
+
+## Assumptions
+
+- The plugin assumes there exists a container that contains several paragraphs
+  as chlildren, please look at `test.html` for an example.
+- The truncation occurs currently only at paragraph borders please take a look
+  at [jTruncate](https://github.com/cybear/jTruncate) if you need to truncate
+  at the paragraph level (show just n characters of a paragraph).
 
 ## Default options
 
@@ -43,3 +46,8 @@ For example to show 3 paragraphs:
 ```javascript
 $("container selector").hideParagraphs({show: 3});
 ```
+
+## Link customization
+
+The links added to the HTML contain a class of `.tp-links` so you can use this
+to customize CSS for them.
