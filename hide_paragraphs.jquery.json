@@ -1,6 +1,7 @@
 {
   "name": "hide_paragraphs",
   "title": "Hide Paragraphs",
+  "version": "0.0.1",
   "description": "Plugin to show the first N paragraphs in a container allowing to toggle visibility of the hidden ones.",
   "author": "Manuel Barros Reyes",
   "licenses": [
@@ -8,5 +9,6 @@
       "type": "MIT",
       "url": "https://raw.github.com/manuca/hide_paragraphs/master/LICENSE.txt"
     }
-  ]
+  ],
+  "dependencies": {"jquery": "1.x.x"}
 }
