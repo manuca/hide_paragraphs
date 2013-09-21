@@ -3,7 +3,11 @@
   "title": "Hide Paragraphs",
   "version": "0.0.1",
   "description": "Plugin to show the first N paragraphs in a container allowing to toggle visibility of the hidden ones.",
-  "author": "Manuel Barros Reyes",
+  "author": {
+    "name" : "Manuel Barros Reyes",
+    "email" : "manuca@gmail.com",
+    "url" : "http://www.kingpin.com.ar/"
+  },
   "licenses": [
     {
       "type": "MIT",
