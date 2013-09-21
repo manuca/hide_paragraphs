@@ -5,6 +5,8 @@ at first glance. It is very useful for example when you only want to show the
 first n paragraphs of a long text. The plugin automatically adds buttons at
 the end of the truncated paragraphs to toggle the conceiled text visibility.
 
+![Demo](https://raw.github.com/manuca/hide_paragraphs/master/demo.gif)
+
 ## Installation
 
 - Include `hide_paragraphs.js` in your HTML headers after JQuery.

@@ -2,7 +2,7 @@
 	$.fn.hideParagraphs = function(options) {
 		var defaults = {
       show: 1,
-      show_text: "Show",
+      show_text: "Show more",
       hide_text: "Hide"
 		};
 
