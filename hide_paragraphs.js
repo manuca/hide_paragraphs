@@ -1,12 +1,12 @@
 (function($) {
-	$.fn.hideParagraphs = function(options) {
-		var defaults = {
+  $.fn.hideParagraphs = function(options) {
+    var defaults = {
       show: 1,
       show_text: "Show more",
       hide_text: "Hide"
-		};
+    };
 
-		var options = $.extend(defaults, options);
+    var options = $.extend(defaults, options);
 
     return this.each(
       function() {
@@ -34,5 +34,5 @@
         });
       }
     );
-	};
+  };
 })(jQuery);
