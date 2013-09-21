@@ -8,7 +8,7 @@ the end of the truncated paragraphs to toggle the conceiled text visibility.
 ## Assumptions
 
 - The plugin assumes there exists a container that contains several paragraphs
-  as chlildren, please look at `text.html` for an example.
+  as chlildren, please look at `test.html` for an example.
 - The truncation occurs currently only at paragraph borders please take a look
   at [jTruncate](https://github.com/cybear/jTruncate) if you need to truncate
   at the paragraph level (show just n characters of a paragraph).
@@ -18,7 +18,7 @@ the end of the truncated paragraphs to toggle the conceiled text visibility.
 Include `hide_paragraphs.js` in your HTML headers.
 
 ```javascript
-$("container").hideParagraphs();
+$("container selector").hideParagraphs();
 ```
 
 by default it show just the first paragraph.
@@ -26,7 +26,7 @@ by default it show just the first paragraph.
 or passing an options object:
 
 ```javascript
-$("container").hideParagraphs(options);
+$("container selector").hideParagraphs(options);
 ```
 
 ## Default options
@@ -41,5 +41,5 @@ self explanatory.
 For example to show 3 paragraphs:
 
 ```javascript
-$("container").hideParagraphs({show: 3});
+$("container selector").hideParagraphs({show: 3});
 ```
