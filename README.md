@@ -3,7 +3,7 @@
 A very simple JQuery plugin that hides paragraphs that you don't want visible
 at first glance. It is very useful for example when you only want to show the
 first n paragraphs of a long text. The plugin automatically adds buttons at
-the end of the truncated paragraphs to toggle the conceiled text visibility.
+the end of the truncated paragraphs to toggle the concealed text visibility.
 
 ## Demo
 
