@@ -42,7 +42,7 @@ The `show` key is the number of paragraph you need to be visible. The rest is
 self explanatory.
 
 ```javascript
-{show: 1, show_text: "Show", hide_text: "Hide"}
+{show: 1, show_text: "Show more", hide_text: "Hide"}
 ```
 
 For example to show 3 paragraphs:
