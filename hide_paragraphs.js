@@ -19,7 +19,7 @@
         var visible    = paragraphs.slice(0, options.show);
         var invisible  = paragraphs.slice(options.show);
         invisible.hide();
-        var link = $("<a class='tp-links' href='#'>" + options.show_text + "</a>");
+        var link = $("<a class='hp-links' href='#'>" + options.show_text + "</a>");
         $(this).append("<p></p>").append(link);
 
         link.click(function() {

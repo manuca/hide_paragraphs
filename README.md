@@ -51,5 +51,5 @@ $("container selector").hideParagraphs({show: 3});
 
 ## Link customization
 
-The links added to the HTML contain a class of `.tp-links` so you can use this
+The links added to the HTML contain a class of `.hp-links` so you can use this
 to customize CSS for them.
