@@ -1,12 +1,12 @@
 {
   "name": "hide_paragraphs",
   "title": "Hide Paragraphs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Plugin to show the first N paragraphs in a container allowing to toggle visibility of the hidden ones.",
   "author": {
     "name" : "Manuel Barros Reyes",
     "email" : "manuca@gmail.com",
-    "url" : "http://www.kingpin.com.ar/"
+    "url" : "https://github.com/manuca/hide_paragraphs"
   },
   "licenses": [
     {

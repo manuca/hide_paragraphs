@@ -3,7 +3,9 @@
     var defaults = {
       show: 1,
       show_text: "Show more",
-      hide_text: "Hide"
+      hide_text: "Hide",
+      link_class: "hp-links",
+      transition_duration: 400
     };
 
     var options = $.extend(defaults, options);
@@ -19,18 +21,20 @@
         var visible    = paragraphs.slice(0, options.show);
         var invisible  = paragraphs.slice(options.show);
         invisible.hide();
-        var link = $("<a class='hp-links' href='#'>" + options.show_text + "</a>");
+        var link = $("<a href='#'>" + options.show_text + "</a>").
+          addClass(options.link_class);
         $(this).append("<p></p>").append(link);
 
         link.click(function() {
           if( $(this).html() == options.show_text ) {
             $(this).html(options.hide_text);
-            invisible.show();
+            invisible.show(options.transition_duration);
           }
           else {
             $(this).html(options.show_text);
-            invisible.hide();
+            invisible.hide(options.transition_duration);
           }
+          return false;
         });
       }
     );

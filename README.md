@@ -38,11 +38,12 @@ $("container selector").hideParagraphs(options);
 
 ## Default options
 
-The `show` key is the number of paragraph you need to be visible. The rest is
-self explanatory.
+The `show` key is the number of paragraph you need to be visible.
+`transition_duration` is passed as is to JQuerys `show()` and `hide()`
+functions.
 
 ```javascript
-{show: 1, show_text: "Show more", hide_text: "Hide"}
+{show: 1, show_text: "Show more", hide_text: "Hide", transition_duration: 400, link_class: "hp-links"}
 ```
 
 For example to show 3 paragraphs:
@@ -50,8 +51,3 @@ For example to show 3 paragraphs:
 ```javascript
 $("container selector").hideParagraphs({show: 3});
 ```
-
-## Link customization
-
-The links added to the HTML contain a class of `.hp-links` so you can use this
-to customize CSS for them.
