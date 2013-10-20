@@ -1,7 +1,7 @@
 {
   "name": "hide_paragraphs",
   "title": "Hide Paragraphs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Plugin to show the first N paragraphs in a container allowing to toggle visibility of the hidden ones.",
   "author": {
     "name" : "Manuel Barros Reyes",

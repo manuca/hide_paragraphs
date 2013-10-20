@@ -23,7 +23,7 @@
         invisible.hide();
         var link = $("<a href='#'>" + options.show_text + "</a>").
           addClass(options.link_class);
-        $(this).append("<p></p>").append(link);
+        $(this).append(link.wrap("<p></p>").parent());
 
         link.click(function() {
           if( $(this).html() == options.show_text ) {
