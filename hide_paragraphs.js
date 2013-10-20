@@ -5,28 +5,27 @@
       show_text: "Show more",
       hide_text: "Hide",
       link_class: "hp-links",
-      transition_duration: 50,
-      limit_first: null
+      transition_duration: 0,
+      limit_visible_chars: null
     };
 
     var options = $.extend(defaults, options);
 
-    function shouldTruncateFirst($p) {
-      return options.limit_first && ($p.first().html().length > options.limit_first);
+    function shouldTruncateChars($p) {
+      return options.limit_visible_chars && ($p.html().length > options.limit_visible_chars);
     }
 
     function hideParagraph($p) {
-      return ($p.length > options.show) || shouldTruncateFirst($p);
+      return ($p.length > options.show) || shouldTruncateChars($p);
     }
 
     function truncatePar($p) {
       var text = $p.html();
-      var split = text.indexOf(' ', options.limit_first);
+      var split = text.indexOf(' ', options.limit_visible_chars);
 
       var head = text.substring(0, split);
       var tail = text.substring(split, text.length - 1);
 
-      // $p.first().html(head + "&hellip;");
       return [head, tail];
     }
 
@@ -35,27 +34,27 @@
         var $container = $(this);
         var $p = $(this).children("p");
         var p_head = "", p_tail = "";
-        var $first_p;
+        var $truncated_p;
 
         if (!hideParagraph($p)) {
           return;
         }
 
-        if (shouldTruncateFirst($p)) {
-          $first_p = $p.first();
-          var parts = truncatePar($first_p);
+        var $visible    = $p.slice(0, options.show);
+        var $invisible  = $p.slice(options.show);
+
+        if (shouldTruncateChars($visible.last())) {
+          $truncated_p = $visible.last();
+          var parts = truncatePar($truncated_p);
 
           head = parts[0];
           tail = parts[1];
         }
 
-        var visible    = $p.slice(0, options.show);
-        var invisible  = $p.slice(options.show);
+        $invisible.hide();
 
-        invisible.hide();
-
-        if ($first_p) {
-          $first_p.html(head + "&hellip;");
+        if ($truncated_p) {
+          $truncated_p.html(head + "&hellip;");
         }
 
         var link = $("<a href='#'>" + options.show_text + "</a>").
@@ -66,19 +65,21 @@
           if( $(this).html() == options.show_text ) {
             $(this).html(options.hide_text);
             $container.addClass("hp-is-extended");
-            invisible.show(options.transition_duration);
 
-            if ($first_p) {
-              $first_p.html(head + tail);
+            $invisible.show(options.transition_duration);
+
+            if ($truncated_p) {
+              $truncated_p.html(head + tail);
             }
+
           }
           else {
             $(this).html(options.show_text);
-            invisible.hide(options.transition_duration);
+            $invisible.hide(options.transition_duration);
             $container.removeClass("hp-is-extended");
 
-            if ($first_p) {
-              $first_p.html(head + "&hellip;");
+            if ($truncated_p) {
+              $truncated_p.html(head + "&hellip;");
             }
           }
           return false;
