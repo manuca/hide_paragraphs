@@ -12,7 +12,7 @@
     var options = $.extend(defaults, options);
 
     function shouldTruncateChars($p) {
-      return options.limit_visible_chars && ($p.html().length > options.limit_visible_chars);
+      return options.limit_visible_chars && ($p.length == 1) && ($p.html().length > options.limit_visible_chars);
     }
 
     function hideParagraph($p) {
