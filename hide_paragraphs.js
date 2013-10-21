@@ -16,7 +16,7 @@
     }
 
     function hideParagraph($p) {
-      return ($p.length > options.show) || shouldTruncateChars($p);
+      return ($p.length > options.show) || shouldTruncateChars($p.last());
     }
 
     function truncatePar($p) {
@@ -32,7 +32,7 @@
     return this.each(
       function() {
         var $container = $(this);
-        var $p = $(this).children("p");
+        var $p = $(this).children();
         var p_head = "", p_tail = "";
         var $truncated_p;
 
