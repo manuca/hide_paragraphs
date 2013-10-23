@@ -33,7 +33,7 @@
       function() {
         var $container = $(this);
         var $p = $(this).children();
-        var p_head = "", p_tail = "";
+        var head = "", tail = "";
         var $truncated_p;
 
         if (!hideParagraph($p)) {
